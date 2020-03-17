@@ -22,6 +22,8 @@ if "<h2>{}</h2>".format(frmdate) not in cont:
     cont = cont.replace("<!--UPLOAD-->","").replace("<!--FIN-->","")
     cont = cont.replace("<!--ADD-->","<!--ADD-->\n<h2>{}</h2>\n<ul>\n<!--UPLOAD-->\n</ul>\n<!--FIN-->".format(frmdate)) 
 
+fics = os.listdir(date)
+
 for fic in os.listdir(date):
     if "{}/{}".format(date,fic) not in cont and fic[0] != ".":
         cont = cont.replace("<!--UPLOAD-->","<!--UPLOAD-->\n<li><a href=\"{0}/{1}\" download>{1}</a></li>".format(date,fic))
@@ -31,5 +33,5 @@ with open("{}.html".format(classe),"w") as fichier:
 
 os.system("git add {}.html".format(classe))
 os.system("git add {}".format(date))
-os.system("git commit -am \"Updt {} {}\"".format(classe,date))
+os.system("git commit -am \"Updt {} {} {}\"".format(classe,date,len(fics)))
 os.system("git push")
