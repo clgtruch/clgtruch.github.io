@@ -14,6 +14,10 @@ frmdate = smj + " " + day + "/" + month
 
 if classe == "62":
     os.chdir("62ekf")
+elif classe == "64":
+    os.chdir("64ide")
+elif classe == "53":
+    os.chdir("53ide")
 
 with open("{}.html".format(classe),"r") as fichier:
     cont = fichier.read()
