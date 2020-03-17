@@ -11,7 +11,7 @@ month = time.strftime("%m", temps)
 smj = time.strftime("%A", temps)
 date = day + month
 frmdate = smj + " " + day + "/" + month
-print(date, frmdate)
+
 if classe == "62":
     os.chdir("62ekf")
 
@@ -19,8 +19,8 @@ with open("{}.html".format(classe),"r") as fichier:
     cont = fichier.read()
 
 if "<h2>{}</h2>".format(frmdate) not in cont:
-    cont = cont.replace("<!--UPLOAD-->","")
-    cont = cont.replace("<!--ADD-->","<!--ADD-->\n<h2>{}</h2>\n<ul>\n<!--UPLOAD-->\n</ul>".format(frmdate)) 
+    cont = cont.replace("<!--UPLOAD-->","").replace("<!--FIN-->","")
+    cont = cont.replace("<!--ADD-->","<!--ADD-->\n<h2>{}</h2>\n<ul>\n<!--UPLOAD-->\n</ul>\n<!--FIN-->".format(frmdate)) 
 
 for fic in os.listdir(date):
     if "{}/{}".format(date,fic) not in cont and fic[0] != ".":
@@ -28,3 +28,8 @@ for fic in os.listdir(date):
 
 with open("{}.html".format(classe),"w") as fichier:
     fichier.write(cont)
+
+os.system("git add {}.html".format(classe))
+os.system("git add {}".format(date))
+os.system("git commit -am \"Updt {} {}\"".format(classe,date))
+os.system("git push")
