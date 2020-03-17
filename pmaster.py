@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 
 def multisplit(chaine,*args):
     nwchn = [chaine]
@@ -36,6 +37,5 @@ for classe in clascode:
 with open("masterpage.html","r") as fichier:
     mascont = fichier.read()
 
-
-
-
+os.system("git add masterpage.html 53fep 64ide 62ekf 65gjd;git commit -am \"update masterpage\";git push")
+os.system("ssh helluy@minux \"cd clgtruch.github.io;git pull\"")
