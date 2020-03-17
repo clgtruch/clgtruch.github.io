@@ -18,5 +18,5 @@ with open("{}.html".format(classe),"w") as fichier:
     fichier.write(cont)
 
 os.system("git add {}.html".format(classe))
-os.system("git commit -am \"Reset {}\"".format(classe)
+os.system("git commit -am \"Reset {}\"".format(classe))
 os.system("../bashpull.sh")
