@@ -18,8 +18,17 @@ section{
     text-align: center;
 }
 
+iframe{
+    padding: 10px;
+    border: solid black 2px;
+    border-radius: 20px;
+}
+
 
 @media (max-width: 680px) {
+    iframe{
+        width: auto;
+    }
     * {
             box-sizing: border-box;
     }
@@ -91,6 +100,7 @@ section{
     }
 
     /* Un message personnalisé */
+
 
 
 @media (max-device-width:768px) and (orientation: landscape) {
