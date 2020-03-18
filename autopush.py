@@ -16,8 +16,10 @@ if classe == "62":
     os.chdir("62ekf")
 elif classe == "64":
     os.chdir("64ide")
+elif classe == "65":
+    os.chdir("65gjd")
 elif classe == "53":
-    os.chdir("53ide")
+    os.chdir("53fep")
 
 with open("{}.html".format(classe),"r") as fichier:
     cont = fichier.read()
