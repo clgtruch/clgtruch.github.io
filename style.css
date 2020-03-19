@@ -8,6 +8,14 @@ body{
     align-items: center;
 }
 
+a:hover{
+    text-decoration: inherit;
+}
+
+a:visited{
+	color: blue;
+}
+
 .organi{
     display: flex;
     justify-content: space-around;
