@@ -32,7 +32,7 @@ fics = os.listdir(date)
 
 for fic in os.listdir(date):
     if "{}/{}".format(date,fic) not in cont and fic[0] != ".":
-        cont = cont.replace("<!--UPLOAD-->","<li><a href=\"{0}/{1}\" download>{1}</a></li>\n<!--UPLOAD-->\n".format(date,fic))
+        cont = cont.replace("<!--UPLOAD-->","<li><a href=\"{0}/{1}\" download>{1}</a></li>\n<!--UPLOAD-->".format(date,fic))
 
 with open("{}.html".format(classe),"w") as fichier:
     fichier.write(cont)
