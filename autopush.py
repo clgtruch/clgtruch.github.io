@@ -6,9 +6,9 @@ import locale
 locale.setlocale(locale.LC_TIME,'')
 temps = time.localtime()
 classe = sys.argv[1]
-day = "17" #time.strftime("%d", temps)
+day = "16" #time.strftime("%d", temps)
 month = time.strftime("%m", temps)
-smj = "mardi" #time.strftime("%A", temps)
+smj = "lundi" #time.strftime("%A", temps)
 date = day + month
 frmdate = smj + " " + day + "/" + month
 
