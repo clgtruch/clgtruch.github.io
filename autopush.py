@@ -8,7 +8,7 @@ temps = time.localtime()
 classe = sys.argv[1]
 day = time.strftime("%d", temps)
 month = time.strftime("%m", temps)
-smj = time.strftime("%A", temps)
+smj = time.strftime("%A", temps).lower()
 date = day + month
 frmdate = smj + " " + day + "/" + month
 
@@ -32,7 +32,7 @@ fics = os.listdir(date)
 
 for fic in os.listdir(date):
     if "{}/{}".format(date,fic) not in cont and fic[0] != ".":
-        cont = cont.replace("<!--UPLOAD-->","<!--UPLOAD-->\n<li><a href=\"{0}/{1}\" download>{1}</a></li>".format(date,fic))
+        cont = cont.replace("<!--UPLOAD-->","<li><a href=\"{0}/{1}\" download>{1}</a></li>\n<!--UPLOAD-->\n".format(date,fic))
 
 with open("{}.html".format(classe),"w") as fichier:
     fichier.write(cont)
