@@ -115,7 +115,8 @@ var corriger = function (e) {
         var rep = dicoCalculs[i].input.value.replace(/\,/g, "."); // , -> .
         if (dicoCalculs[i].type == "nb"){
             if (!isNaN(parseFloat(rep)) && !(parseFloat(rep) != rep && rep != "")) {
-                listeJF.push(rep == eval(dicoCalculs[i].lisiCalc) ? "juste" : "faux");
+                var resultat = arrondi(eval(dicoCalculs[i].lisiCalc)*100000)/100000;
+                listeJF.push(rep == resultat ? "juste" : "faux");
             } else {
                 dicoCalculs[i].input.className = "erreur"
                 if (!prer) {
