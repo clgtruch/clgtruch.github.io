@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="toto.css" />
+    <title>Toto</title>
+</head>
+
+<body>
+    <p>Bonsoir è</p>
+    <table>
+        <caption>Tableau très beau</caption>
+        <tr>
+            <th>Colonne 1</th>
+            <th>Colonne 2</th>
+            <th>Colonne 3</th>
+        </tr>
+        <tr>
+            <td>Coucouw</td>
+            <td>Coucou</td>
+            <td>Coucou</td>
+        </tr>
+        <tr>
+            <td>Espagne</td>
+            <td colspan="2">France</td>
+        </tr>
+    </table>
+
+    <h1>Formulaire</h1>
+    <form method="post" action="https://formspree.io/matthieu.helluy@gmail.com">
+        <fieldset>
+            <legend>Connexion</legend>
+            <p><label for="pseudo">Entrez votre pseudo</label> : <input type="text" name="pseudo" id="pseudo" size="30"
+                    maxlength="20" placeholder="Ex : Notch" value="patrick" autofocus required/></p>
+            <p>
+                <label for="mdp">Entrez votre mot de passe</label> : <input type="password" name="mdp" id="mdp"
+                    size="30" placeholder="*******" required/>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Vous</legend>
+            <p>
+                <label for="txa">Que pensez vous de ce site</label>
+                <textarea name="txa" id="txa">Prérempli</textarea>
+            </p>
+            <p>
+                <label for="couleur">Quelle est vote couleur préférée ?</label>
+                <input id="couleur" name="couleur" type="color" value="#02CFEB" />
+            </p>
+            <p>
+                <label for="fecha">Quel jour sommes nous aujourd'hui ?</label>
+                <input type="date" id="fecha" name="fecha" placeholder="01/01/2018" />
+            </p>
+            <p>
+                Cochez les aliments que vous aimez manger :<br />
+                <input type="checkbox" name="frites" id="frites" /> <label for="frites">Frites</label><br />
+                <input type="checkbox" name="steak" id="steak" checked /> <label for="steak">Steak haché</label><br />
+                <input type="checkbox" name="epinards" id="epinards" /> <label for="epinards">Epinards</label><br />
+                <input type="checkbox" name="huitres" id="huitres" /> <label for="huitres">Huitres</label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Vos origines</legend>
+            <p>
+                Vous êtes d'origine :<br />
+                <input type="radio" name="origine" id="arabe" /><label for="arabe">Arabe</label><br />
+                <input type="radio" name="origine" id="caucasien" checked/><label for="caucasien">Caucasienne</label><br />
+                <input type="radio" name="origine" id="africain" /><label for="africain">Africaine</label><br />
+                <input type="radio" name="origine" id="oceani" /><label for="oceani">Australienne</label><br />
+                <input type="radio" name="origine" id="asia" /><label for="asia">Asiatique</label><br />
+            </p>
+
+            <p>
+                <label for="pays">Et maintenant, vous habitez ?</label>
+                <select id="pays" name="pays">
+                    <optgroup label="Europe">
+                        <option value="italie">Italie</option>
+                        <option value="france" selected>France</option>
+                        <option value="espagne">Espagne</option>
+                        <option value="allemagne">Allemagne</option>
+                        <option value="slovenie">Slovénie</option>
+                        <option value="estonia">Estonie</option>
+                    </optgroup>
+                    <optgroup label="Amérique">
+                        <option value="usa">Etats-Unis</option>
+                        <option value="arg">Argentine</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <input type="submit" value="Envoyer"/>
+            </p>
+        </fieldset>
+    </form>
+</body>
+
+</html>
