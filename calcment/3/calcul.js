@@ -1,9 +1,9 @@
 var listeCalculs = [
     /* Ecrire les calculs sous cette forme : ["9+9","complémentaire","solution"] (les deux derniers sont facultatifs)
     Séparer les calculs par une virgule*/
-    ["","Trouver le nombre inconnu <br>!4//10!+?=1","0.6"],
-    ["","Trouver le nombre inconnu <br>0.001+?=1","0.999"],
-    ["","Trouver le nombre inconnu <br>!15//100!+?=1","0.85"],
+    ["","Trouver le nombre inconnu :<br>!4//10!+?=1","0.6"],
+    ["","Trouver le nombre inconnu :<br>0.001+?=1","0.999"],
+    ["","Trouver le nombre inconnu :<br>!15//100!+?=1","0.85"],
     ["40*25"],
     ["1023*0.01"],
     ["1-!80//100!"],
