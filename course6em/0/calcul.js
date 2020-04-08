@@ -29,7 +29,7 @@ var listeCalculs = [
     ["5.2*100"],
     ["", "Compléter :<br>1+!1//4!+$.$$.$$.$$.$$.$$.$$.$=2<br><br><em>(Donner le résultat en écriture fractionnaire)<$/$em>", "3/4"],
     ["", "Un train part à 11 h 22 min et arrive à 12 h 15 min$.$<br>Quelle est la durée du trajet ?", "0:53", "heure"],
-    ["1000000-1000-1"],
+    ["","1 000 000-1 000-1","998999"],
     ["", "4 cubes empilés ont une hauteur de 10 cm$.$<br>La hauteur de 6 cubes empilés est $.$$.$$.$$.$$.$$.$$.$$.$ cm$.$", "15"],
     ["", "Combien y a-t-il de petits cubes dans ce pavé droit ?<br>\
     <img src='quest30$.$jpg' alt='quest30img'>", "24"]
