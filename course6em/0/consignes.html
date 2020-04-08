@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course aux nombres</title>
+    <link rel="stylesheet" href="consignes.css" />
+</head>
+
+<body>
+    <div class="main">
+        <h1>Consignes pour la course aux nombres</h1>
+        <p>
+            La course aux nombres est un concours de calcul mental. Vous ne le passerez pas cette année, mais
+            c'est un très bon entraînement cérébral !
+            <ul>
+                <li>Il est chronométré : 9 minutes maximum.</li>
+                <li>L'usage de la calculatrice et du brouillon sont
+                    <strong>interdits</strong>.</li>
+                <li>Il n'est pas
+                    permis d'écrire des calculs intermédiaires.</li>
+                <li>Compléter sans mettre les unités : elles sont déjà précisées.</li>
+                <li>Pour écrire les fractions, utiliser la touche <mark>/</mark>.<br />
+                    Exemple : pour écrire
+                    <div class="fraction">
+                        <div class="numerateur">2</div>
+                        <div class="dominateur">3</div>
+                    </div>(deux tiers),
+                    il faut écrire <mark>2/3</mark>
+                </li>
+            </ul>
+        </p>
+        <br />
+        <p class="centre">Voici le sujet de <em>2017</em>.</p>
+        <a href="calcul.html" title="Cliquez si vous êtes prêt !">Cliquer ici pour démarrer !</a>
+        <p id="minutepapillon" class="centre"></p>
+    </div>
+    <script>
+        var bouton = document.getElementsByTagName("a")[0],
+            temps = 30,
+            tempsON = true,
+            minutepapillon = document.getElementById("minutepapillon"),
+            afficheMP = false;
+
+        bouton.addEventListener("click",function(e){
+            if (temps > 0){
+                e.preventDefault();
+                afficheMP = true;
+            }
+        });
+
+        setInterval(function(){
+            if (tempsON){
+                temps --;
+                tempsON = temps > 0 ? true : false;
+                if (afficheMP){
+                    minutepapillon.innerHTML = temps > 0 ? "Tu pourras commencer dans " + temps + " secondes !<br/>Prends bien \
+                    le temps de lire les consignes !" : "Tu peux commencer !"
+                }
+            }
+        },1000);
+    </script>
+</body>
+
+</html>
