@@ -11,7 +11,7 @@ var listeCalculs = [
     ["","Complète par une fraction : <img src='quest8$.$jpg' alt='quest8img'>","2/3"],
     ["","12 vis pèsent 30g$.$<br>24 vis pèsent $.$$.$$.$$.$$.$$.$ g$.$","60"],
     ["36/4"],
-    ["(7*10)+(3*!1//100!)","<br><em>(Donner l'écriture décimale)<$/$em>"],
+    ["(7*10)+(3*!1//100!)","<br><br><em>(Donner l'écriture décimale)<$/$em>"],
     ["","5 dizaines 23 unités =","73"],
     ["","Complète :<img src='quest13$.$jpg' alt='quest13img'>","3.6"],
     ["8*0.25"],
