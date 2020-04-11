@@ -1,0 +1,78 @@
+.fraction{
+    margin-left: 2px;
+    margin-right: 2px;
+    display: inline-block;
+    position: relative;
+    top: 0.65em;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.numerateur{
+    border-bottom: solid 1px black;
+}
+
+.dominateur{
+    border-top: solid 1px black;
+}
+
+.main{
+    text-align: justify;
+    max-width: 50em;
+    margin: auto;
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    background: rgba(214, 212, 212, 0.95);
+    padding: 2em;
+    margin-top: 4%;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+body{
+    background: url("logo.png");
+    background-size: cover;
+}
+
+h1{
+    text-align: center;
+}
+
+a{
+    display: block;
+    background:purple;
+    color: white;
+    text-decoration: inherit;
+    text-align: center;
+    width: 10em;
+    margin: auto;
+    padding: 1em;
+    border-radius: 20px;
+    clear: both;
+}
+
+a:hover{
+    background: rgb(206, 134, 1);
+}
+
+.centre{
+    text-align: center;
+}
+
+figure{
+    text-align: center;
+    max-width: 200px;
+    margin: auto;
+}
+
+strong{
+    color :red;
+}
+
+mark{
+    font-weight: bold;
+    background: inherit;
+}
+
+#minutepapillon{
+    color: red;
+}
