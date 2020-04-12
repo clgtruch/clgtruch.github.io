@@ -8,7 +8,7 @@ var TABLEAU = document.getElementById("calculs"),
     ID = 0,
     listeCalculs = [
         new CalculRep("7*3"),
-        new CalculRep("","Complète :<br>49 = ...*...",["1","1"]),
+        new CalculRep("","Complète par le même nombre :<br>49 = ...*...","7"),
         new CalculRep("","La moitié de 18","9"),
         new CalculRep("17-9"),
         new CalculRep("22+19"),
@@ -62,19 +62,19 @@ transformRadios(15,"Ces figures ont le même périmètre.",["Vrai","Faux"]);
 transformRadios(16,"Ces figures ont la même aire.",["Vrai","Faux"]);
 transformRadios(19,"La hauteur d'une table est :",["80 cm","80 dm","80 m"]);
 
-listeCalculs[1].isCorrect = function(autoset=true){
-    if (parseFloat(this.elements.inputs[0].value.split(",").join(".")) * parseFloat(this.elements.inputs[1].value.split(",").join(".")) == 49){
-        if (autoset){
-            this.setCorriger(true);
-        }
-        return true;
-    } else {
-        if (autoset){
-            this.setCorriger(false);
-        }
-        return false;
-    }
-}
+// listeCalculs[1].isCorrect = function(autoset=true){
+//     if (parseFloat(this.elements.inputs[0].value.split(",").join(".")) * parseFloat(this.elements.inputs[1].value.split(",").join(".")) == 49){
+//         if (autoset){
+//             this.setCorriger(true);
+//         }
+//         return true;
+//     } else {
+//         if (autoset){
+//             this.setCorriger(false);
+//         }
+//         return false;
+//     }
+// }
 
 listeCalculs[15].elements.tdLabel.rowSpan = "2";
 listeCalculs[16].elements.tdLabel.parentNode.removeChild(listeCalculs[16].elements.tdLabel);
