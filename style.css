@@ -2,6 +2,14 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.msgmob{
+    display: none;
+}
+
+p{
+    text-align: center;
+}
+
 .main{
     display: flex;
     justify-content: center;
@@ -67,6 +75,14 @@ iframe{
 
 
 @media (max-width: 680px) {
+
+    .msgmob{
+        display: block;
+        text-align: center;
+        color: red;
+        font-style: italic;
+    }
+
     iframe{
         width: auto;
     }
@@ -140,7 +156,6 @@ iframe{
             display: none !important;
     }
 
-    /* Un message personnalisé */
 
 
 
