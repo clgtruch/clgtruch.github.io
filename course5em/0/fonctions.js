@@ -55,8 +55,10 @@ function CalculRep(calc, compl = "", result = undefined, type = "auto") {
 
     //On définit ce qui s'affichera dans le label :
     var frmCalc = (calc + (typeof compl != "undefined" ? compl : "")).replace(/\*/g, "×").
-        replace(/\//g, "÷").replace(/\./g, ",").replace(/\$\,\$/g, ".").replace(/\$\÷\$/g, "/").replace(/\,\,\,/g, "...").
-        replace(/i\$([0-9]+?)/g,"<img src='quest$1.jpg' alt='quest$1img'>").split("!");
+        replace(/\//g, "÷").replace(/\.{1,1}/g, ",").replace(/\$\,\$/g, ".").replace(/\$\÷\$/g, "/").replace(/,{2,}/g, function(str){
+            return str.replace(/,/g,".");
+        }).
+        replace(/i\$([0-9]+)/g,"<img src='quest$1.jpg' alt='quest$1img'>").split("!");
     if (frmCalc.length > 1) {
         for (var j = 1, d = frmCalc.length; j < d; j += 2) {
             frmCalc[j] = frmCalc[j].replace("÷÷", '</div><div class="denominateur">');
@@ -168,15 +170,15 @@ function CalculRep(calc, compl = "", result = undefined, type = "auto") {
         for (var i = 0; i < this.elements.inputs.length; i++) {
             if (this.type == "nb") {
                 if (this.autoNb) {// SI le résultat a été calculé automatiquement
-                    corrects.push(arrondi(eval(this.calc) * 100000) / 100000 == parseFloat(this.elements.inputs[i].value.split(",").join(".")));
+                    corrects.push(arrondi(eval(this.calc.replace(/ /g,"")) * 100000) / 100000 == parseFloat(this.elements.inputs[i].value.replace(/,/g,".").replace(/ /g,"")));
                 } else {
-                    corrects.push(parseFloat(this.result[i]) == parseFloat(this.elements.inputs[i].value.split(",").join(".")));
+                    corrects.push(parseFloat(this.result[i]) == parseFloat(this.elements.inputs[i].value.replace(/,/g,".").replace(/ /g,"")));
                 }
             } else if (this.type == "heure" && i % 2 == 0) { //Si il s'agit d'une heure
                 corrects.push(parseFloat(this.result[i / 2].split(":")[0]) == parseFloat(this.elements.inputs[i].value)
                     && parseFloat(this.result[i / 2].split(":")[1]) == parseFloat(this.elements.inputs[i + 1].value));
             } else if (this.type == "str") {
-                corrects.push(this.elements.inputs[i].value == this.result[i]);
+                corrects.push(this.elements.inputs[i].value.trim() == this.result[i]);
             }
         }
         for (var i = 0; i < corrects.length; i++) {
@@ -291,6 +293,8 @@ function CalculRep(calc, compl = "", result = undefined, type = "auto") {
 
         this.setError = function () {
             this.elements.tdInputs.style.background = "rgba(255, 145, 0, 0.521)";
+            console.log(this.elements.inputs[0])
+            this.elements.inputs[0].focus();
         };
         this.clearClass = function () {
             this.elements.tdInputs.style.background = "";
