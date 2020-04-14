@@ -1,3 +1,5 @@
+//JSCalcment v2.0 Helluy 2020
+
 var TABLEAU = document.getElementById("calculs"),
     boutonFin = document.getElementById("fin"),
     pScore = document.getElementById("score"),

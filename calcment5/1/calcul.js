@@ -1,3 +1,5 @@
+//JSCalcment v0.1 Helluy 2020
+
 var listeCalculs = [
     /* Ecrire les calculs sous cette forme : ["9+9","complémentaire","solution"] (les deux derniers sont facultatifs)
     Séparer les calculs par une virgule*/
@@ -37,7 +39,7 @@ for (var i = 0, c = listeCalculs.length; i < c; i++) {
     var frmCalc = (listeCalculs[i][0] + (typeof listeCalculs[i][1] != "undefined" ? listeCalculs[i][1] : "")).replace(/\*/g, "×").replace(/\//g, "÷").replace(/\./g, ",").split("!");
     if (frmCalc.length > 1) {
         for (var j = 1, d = frmCalc.length; j < d; j += 2) {
-            frmCalc[j] = frmCalc[j].replace("÷÷", '</div><div class="dominateur">');
+            frmCalc[j] = frmCalc[j].replace("÷÷", '</div><div class="denominateur">');
             frmCalc[j] = "<div class='fraction'><div class='numerateur'>" + frmCalc[j] + "</div></div>";
         }
     }

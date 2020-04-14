@@ -1,3 +1,5 @@
+//JSCalcment v0.1 Helluy 2020
+
 var listeCalculs = [
     /* Ecrire les calculs sous cette forme : ["9+9","complémentaire","solution"] (les deux derniers sont facultatifs)
     Séparer les calculs par une virgule*/
