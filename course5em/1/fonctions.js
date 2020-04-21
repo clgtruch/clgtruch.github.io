@@ -1,4 +1,4 @@
-//JSCalcment v2.1 Helluy 2020
+//JSCalcment v2.2 Helluy 2020
 
 var TABLEAU = document.getElementById("calculs"),
     timerON = false,
@@ -72,18 +72,18 @@ function CalculRep(calc, compl = "", result = undefined, type = "auto") {
             this.elements.inputs.push(document.createElement("input"));
             this.elements.inputs[i].id = "calcn" + ID + "_" + i;
             this.elements.inputs[i].placeholder = "Réponse";
-            this.elements.inputs[i].type = "text"
+            this.elements.inputs[i].type = "text";
         } else {
             if (i % 2 == 0) {
                 this.elements.inputs.push(document.createElement("input"));
                 this.elements.inputs[i].id = "calcn" + ID + "_" + i + "a";
-                this.elements.inputs[i].placeholder = "Heure(s)"
-                this.elements.inputs[i].type = "text"
+                this.elements.inputs[i].placeholder = "Heure(s)";
+                this.elements.inputs[i].type = "text";
             } else {
                 this.elements.inputs.push(document.createElement("input"));
                 this.elements.inputs[i].id = "calcn" + ID + "_" + i + "b";
-                this.elements.inputs[i].placeholder = "Minute(s)"
-                this.elements.inputs[i].type = "text"
+                this.elements.inputs[i].placeholder = "Minute(s)";
+                this.elements.inputs[i].type = "text";
             }
         }
     }
@@ -204,7 +204,21 @@ function CalculRep(calc, compl = "", result = undefined, type = "auto") {
         this.elements.inputs[i].addEventListener("focus", this.eventFocus);
         this.elements.inputs[i].addEventListener("blur", this.eventBlur);
     }
-
+    //Ajout 2.2 : Remplace automatiquement les symboles par les chiffres associés pour les nombres
+        //Ne fonctionne pas pour le 6 des claviers dits Windows car la même touche est utilisé pour le -
+        //Fonctionne pour tous les chiffres sur claviers Mac (aucun symbole "réservé")
+        //A une protection de touches réservées(blocage de la fonctionnalité) (, + - . /) pour des claviers de configuration bizaroïde...
+    if (this.type == "nb" || this.type == "heure"){
+        this.addEventListener("keydown",function(e){
+            if (~[48,49,50,51,52,53,54,55,56,57].indexOf(e.keyCode) && !~["-",",","+",".","/"].indexOf(e.key)){
+                e.preventDefault();
+                var start = e.currentTarget.selectionStart;
+                e.currentTarget.value = e.currentTarget.value.substring(0,start) + (e.keyCode - 48) + 
+                e.currentTarget.value.substring(e.currentTarget.selectionEnd,e.currentTarget.value.length);
+                e.currentTarget.selectionStart = e.currentTarget.selectionEnd = start + 1; //repositionnement du curseur
+        }});
+    }
+/////////////////////////////////////////////////////////////////////////////////////
     //Permet de transformer le champ de réponse en boutons radios
     this.transformRadios = function (quest, listeChoix) {
         //Suppression des inputs existants
@@ -292,6 +306,7 @@ function CalculRep(calc, compl = "", result = undefined, type = "auto") {
         }
 
         this.addEventListener("change", this.eventFocus);
+        
     }
     ID += 1;
 }

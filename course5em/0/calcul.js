@@ -38,9 +38,9 @@ var boutonFin = document.getElementById("fin"),
         Il donne les !4//5! de cet argent à son frère$.$<br><br>\
         Il lui reste ....€$.$","6"),
         new CalculRep("","Dans !2//3! combien de fois !1//6! ?","4"),
-        new CalculRep("","Donner le volume, en litres, d'un cube de 2 m d'arête$.$","800"),
+        new CalculRep("","Donner le volume, en litres, d'un cube de 2 m d'arête$.$","8000"),
         new CalculRep("","2 cm² + 7 mm² = ....cm²","2.07"),
-        new CalculRep("","i$30MB = ...... cm","2.8")
+        new CalculRep("","i$30MB = ...... cm","1.8")
     ];
 
 listeCalculs[12].transformRadios("Cocher la réponse :",["A","B","C","D","E"]);
@@ -67,7 +67,7 @@ boutonFin.addEventListener("click", function (e) {
         for (var i = 0; i < listeCalculs.length; i++) {
             listeJF += listeCalculs[i].isCorrect() ? 1 : 0;
         }
-        pScore.textContent = "Votre score est " + arrondi(listeJF / listeCalculs.length * 30) + "/30";
+        pScore.textContent = "Votre score est " + Math.round(listeJF / listeCalculs.length * 30) + "/30";
         timerON = false;
     }
 });
