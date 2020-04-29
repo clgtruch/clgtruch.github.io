@@ -50,7 +50,7 @@ boutonFin.addEventListener("click", function (e) {
         if (score == 100){
             lienSuite.style.display = "block";
         } else {
-            pScore.innerHTML += "<br/><span style='color:red;'>Il reste des erreurs ! Corrige-les pour accéder à la suite !</span>";
+            pScore.innerHTML += "<br/><span style='color:red;'>Il reste des erreurs ! Corrige-les et clique à nouveau sur \"Terminer\" pour accéder à la suite !</span>";
         }
         timerON = false;
     }
