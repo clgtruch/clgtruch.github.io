@@ -8,14 +8,14 @@ var boutonFin = document.getElementById("fin"),
     jeuEnCours = true,
     listeCalculs = [
         new CalculRep("","a) L'.... d'un repère est le seul point",/^origine$/i),
-        new CalculRep("","dont les .... sont égales à zéro$.$",/^co+rdon+[ée]e*s*$/i),
+        new CalculRep("","dont les .... sont égales à zéro$.$",/^coordonn[ée]e*s*$/i),
         new CalculRep("","b) Tous les points situés au dessus de l'... des abscisses",/^axe$/i),
-        new CalculRep("","ont une ordonnée ... et ceux",/^positi(?:ve|f)$/i),
-        new CalculRep("","situés au-dessous, une ordonnée ...",/^n[ée]gati(?:f|ve)\.?$/i),
+        new CalculRep("","ont une ordonnée ... et ceux",/^positive$/i),
+        new CalculRep("","situés au-dessous, une ordonnée ...",/^n[ée]gative\.?$/i),
         new CalculRep("","c) Tous les points situés à gauche de l'... des ordonnées",/^axe$/i),
         new CalculRep("","ont une ... négative",/^abscisse$/i),
         new CalculRep("","et ceux situés à droite, une .... positive$.$",/^abscisse$/i),
-        new CalculRep("","d) Tous les points de l'axe des ... ont une abscisse égale à zéro$.$",/^ordon+[ée]es*$/i),
+        new CalculRep("","d) Tous les points de l'axe des ... ont une abscisse égale à zéro$.$",/^ordonn[ée]es*$/i),
         new CalculRep("","e) Tous les points de l'axe des ... ont une ordonnée égale à zéro$.$",
         /^abscisses*$/i)
     ];
