@@ -7,9 +7,9 @@ var boutonFin = document.getElementById("fin"),
     lienSuite = document.getElementById("lienSuite"),
     jeuEnCours = true,
     listeCalculs = [
-        new CalculRep("","Données :<br>(dvv3vv)$/$$/$(dvv4vv)<br>(dvv3vv)$/$$/$(dvv5vv)<br>Figure :<br>i$1",/^si\s+deux\s+droites\s+sont\s+parall[eè]les\s+[àa]\s+(?:une|la)\s+m[eê]me\s+troisi[èe]me\s+droite[,\s]+alors\s+elles\s+sont\s+parall[èe]les\s+entre[-\s]+elles\.?$/i),
-        new CalculRep("","Données :<br>(dvv1vv)⊥(dvv2vv)<br>(dvv1vv)$/$$/$(dvv3vv)<br>Figure :<br>i$2",/^si\s+deux\s+droites\s+sont\s+parall[èe]les\s+et\s+si\s+une\s+troisi[èe]me\s+droite\s+est\s+perpendiculaire\s+[àa]\s+l[\s']+une[,\s]+alors\s+elle\s+est\s+perpendiculaire\s+[aà]\s+l[\s']+autre\.?$/i),
-        new CalculRep("","Données :<br>(AB)⊥(AC)<br>(AB)⊥(BE)<br>Figure :<br>i$3",/^si\s+deux\s+droites\s+sont\s+perpendiculaires\s+[àa]\s+(?:une|la)\s+m[êe]me\s+troisi[eè]me\s+droite[,\s]+alors\s+elles\s+sont\s+parall[èe]les\s+entre[-\s]+elles\.?$/i)
+        new CalculRep("","Données :<br>(dvv3vv)$/$$/$(dvv4vv)<br>(dvv3vv)$/$$/$(dvv5vv)<br>Figure :<br>i$1",/^si\s+deux\s+droites\s+sont\s+parall[eè]les\s+[àa]\s+(?:une|la)\s+m[eê]me\s+(?:troisi[èe]me\s+)?droite[,\s]+alors\s+elles\s+sont\s+parall[èe]les(?:\s+entre[-\s]+elles)?\s*\.?$/i),
+        new CalculRep("","Données :<br>(dvv1vv)⊥(dvv2vv)<br>(dvv1vv)$/$$/$(dvv3vv)<br>Figure :<br>i$2",/^si\s+deux\s+droites\s+sont\s+parall[èe]les\s+et\s+si\s+une\s+(?:troisi[èe]me\s+)?droite\s+est\s+perpendiculaire\s+[àa]\s+l[\s']+une[,\s]+alors\s+elle\s+est\s+perpendiculaire\s+[aà]\s+l[\s']+autre\s*\.?$/i),
+        new CalculRep("","Données :<br>(AB)⊥(AC)<br>(AB)⊥(BE)<br>Figure :<br>i$3",/^si\s+deux\s+droites\s+sont\s+perpendiculaires\s+[àa]\s+(?:une|la)\s+m[êe]me\s+(?:troisi[eè]me\s+)?droite[,\s]+alors\s+elles\s+sont\s+parall[èe]les(?:\s+entre[-\s]+elles)?\s*\.?$/i)
     ];
 
 var tdinp = document.querySelectorAll(".tdinput"),
