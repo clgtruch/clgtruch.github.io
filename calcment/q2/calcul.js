@@ -49,7 +49,7 @@ listeCalculs[2].isCorrect = function (autoset = true) {
 }
 
 listeCalculs[3].isCorrect = function(autoset=true){
-    if (parseFloat(this.elements.inputs[0].value) == 2 && this.elements.inputs[1].value === "8"){
+    if (parseFloat(this.elements.inputs[0].value) == 2 && this.elements.inputs[1].value.trim() === "8"){
         if (autoset) {
             this.setCorriger(true)
         }
@@ -63,7 +63,7 @@ listeCalculs[3].isCorrect = function(autoset=true){
 }
 
 listeCalculs[4].isCorrect = function (autoset = true) {
-    if (430 % parseFloat(this.elements.inputs[0].value) == 0 && this.elements.inputs[1].value === "0") {
+    if (430 % parseFloat(this.elements.inputs[0].value) == 0 && this.elements.inputs[1].value.trim() === "0") {
         if (autoset) {
             this.setCorriger(true)
         }
@@ -77,7 +77,7 @@ listeCalculs[4].isCorrect = function (autoset = true) {
 }
 
 listeCalculs[5].isCorrect = function (autoset = true) {
-    if (parseFloat(this.elements.inputs[0].value) % 10 == 0 && this.elements.inputs[1].value === "0") {
+    if (parseFloat(this.elements.inputs[0].value) % 10 == 0 && this.elements.inputs[1].value.trim() === "0") {
         if (autoset) {
             this.setCorriger(true)
         }
@@ -91,7 +91,7 @@ listeCalculs[5].isCorrect = function (autoset = true) {
 }
 
 listeCalculs[6].isCorrect = function (autoset = true) {
-    if (parseFloat(this.elements.inputs[0].value) % 5 == 0 && parseFloat(this.elements.inputs[0].value) % 10 != 0 && this.elements.inputs[1].value === "5") {
+    if (parseFloat(this.elements.inputs[0].value) % 5 == 0 && parseFloat(this.elements.inputs[0].value) % 10 != 0 && this.elements.inputs[1].value.trim() === "5") {
         if (autoset) {
             this.setCorriger(true)
         }
