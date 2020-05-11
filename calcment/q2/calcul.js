@@ -91,7 +91,7 @@ listeCalculs[5].isCorrect = function (autoset = true) {
 }
 
 listeCalculs[6].isCorrect = function (autoset = true) {
-    if (parseFloat(this.elements.inputs[0].value) % 5 == 0 && this.elements.inputs[1].value === "5") {
+    if (parseFloat(this.elements.inputs[0].value) % 5 == 0 && parseFloat(this.elements.inputs[0].value) % 10 != 0 && this.elements.inputs[1].value === "5") {
         if (autoset) {
             this.setCorriger(true)
         }
