@@ -57,6 +57,10 @@ a:visited{
 	color: blue;
 }
 
+a:active{
+    color: red;
+}
+
 .organi{
     display: flex;
     justify-content: space-around;
