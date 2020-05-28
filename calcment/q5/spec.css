@@ -1,0 +1,14 @@
+img{
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+td{
+    border: unset;
+    border-left: solid black 1px; border-right: solid black 1px;
+}
+
+table{
+    border: solid 1px black;
+}
