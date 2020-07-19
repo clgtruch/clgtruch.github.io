@@ -1,0 +1,35 @@
+body{
+    background: rgb(226, 225, 225);
+}
+
+.item-page{
+    width: 1000px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    border: rgba(128, 128, 128, 0.37) solid 2px;
+    padding: 10px;
+    box-shadow: grey 3px 3px 3px;
+    background: white;
+}
+
+.center{
+    text-align: center;
+}
+
+a:visited{
+    color: red;
+}
+
+a{
+    color: red;
+    text-decoration: unset;
+}
+
+a:hover{
+    text-decoration: underline red;
+}
+
+.chercherseul{
+    color: white;
+    font-style: italic;
+}
