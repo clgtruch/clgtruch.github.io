@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Question flash n°1</title>
+</head>
+<body>
+    <h1>Question flash n°1</h1>
+    <p>
+        L'exercice comporte 15 questions.<br/>Attention : le temps de réponse est limité.
+    </p>
+    <a href="quest1.html" id="suite">Commencer</a>
+    <script src="../../scripts/nb.js"></script>
+    <script>
+        document.getElementById("suite").style.display = "block";
+    </script>
+    <script>
+        delete localStorage["math-qflash1"];
+        for (let i = 1 ; i < 16 ; i ++){
+          delete localStorage["math-qflash1-q" + i];
+        }
+        
+      </script>
+</body>
+</html>

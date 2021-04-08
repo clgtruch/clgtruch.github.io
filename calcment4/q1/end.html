@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fin de la question Flash</title>
+</head>
+
+<body>
+    <h1>Fin de la question flash</h1>
+    <p>La question flash est terminée !</p>
+    <p>Votre score est de <span></span>/15.</p>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script>
+  $("span").text(localStorage["math-qflash1"]);
+  delete localStorage["math-qflash1"];
+  for (let i = 1 ; i < 16 ; i ++){
+    delete localStorage["math-qflash1-q" + i];
+  }
+  
+</script>
+
+</body>
+
+</html>
