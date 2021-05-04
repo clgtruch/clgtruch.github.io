@@ -69,15 +69,20 @@ $(function(){
             reqData.temps = temps;
             reqData.exId = clgtruch_exId;
             reqData.results = dic;
-            $.ajax({
-                type: "POST",
-                url: IP + "/app",
-                data: {data:JSON.stringify(reqData)},
-                success: function (response) {
-                    console.log(response);
-
-                }
-            });
+            let toSend = JSON.stringify(reqData);
+            if (toSend !== sessionStorage["clgtruch-lastSend"]){
+                $.ajax({
+                    type: "POST",
+                    url: IP + "/app",
+                    data: {data:toSend},
+                    success: function (response) {
+                        console.log(response);
+                        sessionStorage["clgtruch-lastSend"] = toSend;
+    
+                    }
+                });
+            }
+            
         }
             
     });
